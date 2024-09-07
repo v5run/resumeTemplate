@@ -1,0 +1,213 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage[margin=1.4cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\textwidth}{0.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \scshape Varun Pathak} \\[2mm]
+    \footnotesize \raisebox{-0.1\height}
+    \faPhone\ \underline{+1 (289) 981-2868} ~ 
+    {\faEnvelope\  \underline{pathav4@mcmaster.ca}} ~ 
+    {\faLinkedin\ \underline{linkedin.com/in/v5run }}  ~
+    {\faGithub\ \underline{github.com/v5run}} ~
+    {\faBriefcase\ \underline{v5run.github.io/}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{Expected Grad: May 2027}
+      {Software Engineering and Management Co-op (B.Eng.Mgt.)}{Hamilton, ON}
+      \resumeItemListStart
+        \resumeItem{Dean’s Honors List (2023, 2024)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RELEVANT COURSES-----------
+{\footnotesize
+
+Relevant Courses: \\[2mm]
+\resumeSubHeadingListStart
+\begin{multicols}{3}  % Start of the multicol environment
+\begin{itemize}[leftmargin=+25pt, itemsep=-1pt]  % Reduce space between items
+\item Data Structures and Algorithms
+\item Object-Oriented Programming (Java)
+\item Software Development (C, Bash/Unix)
+\item Digital Systems + Comp. Architecture
+\item Software Design Patterns
+\item Intro. Accounting + Marketing
+\end{itemize}  % End of the itemize environment
+\end{multicols}  % End of the multicol environment
+\resumeSubHeadingListEnd
+}
+\vspace{-10pt}
+%-----------PROJECTS-----------
+\section{Projects} 
+\vspace{-5pt}
+\resumeSubHeadingListStart
+%-----------Eden---------------
+\resumeProjectHeading
+{\textbf{{Garden of Eden - Blockchain}} $|$ \emph{\href{https://github.com/v5run/eden}{Source Code}}}{Java $|$ MongoDB $|$ BouncyCastle}
+\\[5mm]
+\resumeItemListStart
+\resumeItem{Developed a decentralized blockchain wallet system in \textbf{Java}, utilizing MongoDB for scalable transaction storage, resulting in a robust and secure platform capable of handling high transaction volumes without data integrity issues.}
+\resumeItem{Engineered a secure transaction system utilizing \textbf{ECDSA} from \textbf{BouncyCastle} for digital signatures and \textbf{SHA-256} for hashing, ensuring the integrity and authenticity of blockchain transactions.}
+\resumeItem{Implemented custom wallet functionality with public/private key pairs incorporating \textbf{Java Security}, enabling users to send and receive funds securely.}
+\resumeItem{Developed and integrated \textbf{MongoDB} for efficient and scalable storage of blockchain transaction-block data, optimizing data models for high-speed, high-volume environments, and enabling real-time tracking and querying of blockchain activities.}
+\resumeItemListEnd 
+\vspace{-17pt}
+
+%-------- Maze Solver
+\resumeProjectHeading
+{\textbf{{Maze Runner}} $|$ \emph{\href{https://github.com/v5run/a3-maze-runner-take-two-v5run}{Source Code}}}{Java $|$ Apache Log4j $|$ API}
+\\[5mm]
+\resumeItemListStart
+\resumeItem{Implemented a maze-solving approach that adheres to the \textbf{right-hand rule and breadth-first searching (BFS)} to navigate mazes, including dynamic direction changes based on wall detection and directional turns.}
+\resumeItem{Integrated \textbf{Apache Log4j} for comprehensive logging of maze-solving processes. Enabled detailed traceability of algorithm execution and path-finding decisions, which improved debugging capabilities and facilitated performance analysis.}
+\resumeItem{Emphasized clean code principles and best practices in \textbf{Java}, including \textbf{encapsulation}, \textbf{modular design}, and clear method documentation. Ensured maintainability and scalability of the codebase through well-defined \textbf{interfaces}, such as the MazeSolver interface, and well-organized method responsibilities.}
+\resumeItemListEnd 
+\vspace{-17pt}
+
+\resumeProjectHeading
+{\textbf{{Personal Portfolio}} $|$ \emph{\href{https://v5run.github.io/}{Website}{ $|$ }\href{https://github.com/v5run/v5run.github.io}{Source Code}}}{HTML $|$ CSS $|$ JavaScript $|$ Google Sheets}
+\\[5mm]
+\resumeItemListStart
+\resumeItem{Developed a professional online personal portfolio using \textbf{HTML, CSS, and JavaScript} characteristics.}
+\resumeItem{Exploited \textbf{HTML/CSS} tags to create responsive, visual effects.}
+\resumeItem{Created an \textbf{automated text-receive system}, storing contact information in Google Sheets.}
+\resumeItemListEnd 
+\vspace{-17pt}
+
+%-----------Dice Art------------
+\resumeProjectHeading
+{\textbf{{“Dice Art” Image Filter}} $|$ \emph{\href{https://github.com/v5run/DiceArt.io}{Source Code}}}{Python $|$ Streamlit}
+\\[5mm]
+\resumeItemListStart
+\resumeItem{User is able to upload an image of their choice and have it visualized using only the six sides of a casino die.}
+\resumeItem{Leverages \textbf{Python's imaging library (PIL)} and \textbf{Streamlit} capabilities.}
+\resumeItem{Utilizes \textbf{Streamlit}’s onboard functions to denote on-screen effects (loading bars, success messages, etc.)}
+\resumeItemListEnd 
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------Experience---------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{AskTutors. INC}{2023 -- Present}{Tutor (Math + Physics)}{Oakville, ON} 
+\resumeItemListStart
+\resumeItem{One-on-one tutoring sessions (online + in-person) for \textbf{12+ students concurrently} in Grades 3-12 in \textbf{Math and Physics}, prioritizing individual learning gaps and enhancing overall understanding.}
+\resumeItem{Tailored lesson plans to meet diverse student needs and learning styles (inc. IEP).}
+\resumeItem{Monitored and assessed student progress, adjusting instructional techniques as needed to ensure optimal growth.}
+\resumeItemListEnd
+
+
+\vspace{-5pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{\textbf{Languages}{: Java, Python, C, MATLAB, Verilog, Bash, HTML, CSS, JavaScript} \\[1mm]}
+\item{\textbf{Developer Tools / Frameworks}{: Git, Maven, Github, MongoDB, Apache Log4j} \\[1mm]}
+\item{\textbf{Verbal Languages}{: English (Fluent, Native), French (DELF B1 Certified), Punjabi (Full Verbal Proficiency).} \\ [1mm]}
+}
+\end{itemize}
+\vspace{-16pt}
+\vspace{3pt}
+\vspace{10pt}
+
+\vspace{-15pt}
+
+\end{document}
